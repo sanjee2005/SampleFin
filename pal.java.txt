@@ -1,0 +1,35 @@
+package basics;
+
+public class RevPalin {
+
+	public static void main(String[] args) {
+		long n=98;
+		int k=30;
+		
+		for(int i=1;i<=k;i++) {
+			long r=0,temp=n;
+			while(temp>0) {
+				r=r*10+(temp%10);
+				temp/=10;
+			}
+			n=n+r;
+			long l=n,rc=0;
+			
+			while(l>0) {
+				
+				rc=rc*10+(l%10);
+				l/=10;
+				
+				if(n==rc) {
+					System.out.println(i+","+rc);
+					return;
+				}
+				
+			}
+			
+		}
+		System.out.println("[-1,-1]");
+
+	}
+
+}
